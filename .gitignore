@@ -1,4 +1,4 @@
-main/__pycache__
-main/dist
-main/GSE.egg-info
+main/__pycache__/**
+main/dist/**
+main/GSE.egg-info/**
 
