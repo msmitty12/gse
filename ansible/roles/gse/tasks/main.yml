@@ -1,0 +1,22 @@
+- name: download epel
+  get_url:
+    url: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noar    ch.rpm"
+    dest: "/tmp/epel-release-latest-7.noarch.rpm"
+
+- name: install epel
+  yum:
+    name: "/tmp/epel-release-latest-7.noarch.rpm"
+    state: present
+
+- name: install nginx
+  yum:
+    name: "{{item}}"
+    state: latest
+  with_items:
+    - python34
+    - nginx
+
+- name: copy gse service
+  copy:
+    src: gse.service
+    dest: /usr/lib/systemd/system/gse.service
