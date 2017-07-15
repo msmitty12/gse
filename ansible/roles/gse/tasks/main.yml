@@ -44,3 +44,8 @@
     repo: "https://github.com/msmitty12/gse.git"
     accept_hostkey: yes
     dest: /home/nginx/gse
+
+- name: copy wsgi.py
+  copy:
+    src: wsgi.py
+    dest: /home/nginx/gse/main/gse/wsgi.py
