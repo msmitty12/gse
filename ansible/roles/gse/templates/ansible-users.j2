@@ -1,0 +1,6 @@
+# Created by cloud-init v. 0.7.6 on Tue, 11 Jul 2017 04:50:21 +0000
+
+# User rules for ec2-user
+{% for item in sudoers %}
+{{ item }} ALL=(ALL) NOPASSWD:ALL
+{% endfor %}

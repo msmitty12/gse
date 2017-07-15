@@ -1,0 +1,4 @@
+---
+app_name: "gse"
+sudoers:
+  - nginx
